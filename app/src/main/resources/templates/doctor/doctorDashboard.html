@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>DoctorDashboard</title>
+
+  <!-- Favicon -->
+  <link rel="icon" th:href="@{/assets/images/logo/logo.png}" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}" />
+  <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}" />
+  <link rel="stylesheet" th:href="@{/assets/css/style.css}" />
+
+  <!-- Utilities -->
+  <script th:src="@{/js/render.js}" defer></script>
+  <script th:src="@{/js/util.js}" defer></script>
+
+  <!-- Components -->
+  <script th:src="@{/js/components/header.js}" defer></script>
+  <script th:src="@{/js/components/footer.js}" defer></script>
+  <script th:src="@{/js/components/patientRows.js}" defer></script>
+
+  <!-- Services -->
+  <script th:src="@{/js/services/patientServices.js}" defer></script>
+  <script th:src="@{/js/doctorDashboard.js}" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+
+      <!-- Header -->
+      <div id="header"></div>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Search -->
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Search patient..."
+        />
+
+        <!-- Filters -->
+        <div class="filter-wrapper">
+          <button id="todayBtn" class="dashboard-btn">
+            Today’s Appointments
+          </button>
+
+          <input type="date" id="dateFilter" />
+        </div>
+
+        <!-- Patient Table -->
+        <table id="patientTable">
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Prescription</th>
+            </tr>
+          </thead>
+          <tbody id="patientTableBody">
+            <!-- Dynamically rendered -->
+          </tbody>
+        </table>
+
+        <p class="noPatientRecord" id="noPatientRecord" hidden>
+          No patient records found
+        </p>
+      </main>
+
+      <!-- Footer -->
+      <div id="footer"></div>
+    </div>
+  </div>
+</body>
+</html>
