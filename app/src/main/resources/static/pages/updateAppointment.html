@@ -1,0 +1,63 @@
+<!-- src/main/resources/templates/updateAppointment.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" th:href="@{/assets/images/logo/logo.png}" />
+    <title>Doctor Dashboard - Update Appointment</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/updateAppointment.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+    <!-- JS Files -->
+    <script th:src="@{/js/render.js}" defer></script>
+    <script th:src="@{/js/util.js}" defer></script>
+    <script th:src="@{/js/components/header.js}" defer></script>
+    <script th:src="@{/js/components/footer.js}" defer></script>
+    <script type="module" th:src="@{/js/updateAppointment.js}" defer></script>
+</head>
+
+<body onload="renderContent()">
+    <div class="container">
+        <div class="wrapper">
+            <!-- Header -->
+            <div th:replace="fragments/header :: header" id="header"></div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="form-container">
+                    <h2>Update <span>Appointment</span></h2>
+                    <form id="updateAppointmentForm">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" disabled>
+
+                        <label for="doctorName">Doctor Name</label>
+                        <input type="text" id="doctorName" disabled>
+
+                        <label for="appointmentDate">Date</label>
+                        <input type="date" id="appointmentDate" required>
+
+                        <label for="appointmentTime">Time</label>
+                        <select id="appointmentTime" required>
+                            <!-- Options populated dynamically -->
+                        </select>
+
+                        <button type="submit" class="btn-primary" id="updateAppointment">Update Appointment</button>
+                        <button type="button" 
+                                th:onclick="|window.location='@{/pages/patientAppointments.html}'|"
+                                class="btn-secondary">Cancel</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div th:replace="fragments/footer :: footer" id="footer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

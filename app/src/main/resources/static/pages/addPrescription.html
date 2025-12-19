@@ -1,0 +1,60 @@
+<!-- src/main/resources/templates/addPrescription.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" th:href="@{/assets/images/logo/logo.png}" />
+    <title>Doctor Dashboard</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/addPrescription.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+    <!-- JS Files -->
+    <script th:src="@{/js/render.js}" defer></script>
+    <script th:src="@{/js/util.js}" defer></script>
+    <script th:src="@{/js/components/header.js}" defer></script>
+    <script th:src="@{/js/components/footer.js}" defer></script>
+    <script type="module" th:src="@{/js/addPrescription.js}"></script>
+</head>
+
+<body onload="renderContent()">
+    <div class="container">
+        <div class="wrapper">
+            <!-- Header -->
+            <div th:replace="fragments/header :: header" id="header"></div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="form-container">
+                    <h2 id="heading">Add <span>Prescription</span></h2>
+                    <form th:action="@{/api/prescriptions}" method="post">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" name="patientName" disabled>
+
+                        <label for="medicines">Medicine Names</label>
+                        <input type="text" id="medicines" name="medicines" placeholder="e.g. Paracetamol, Vitamin C" required>
+
+                        <label for="dosage">Dosage Instructions</label>
+                        <textarea id="dosage" name="dosage" rows="3"
+                            placeholder="e.g - Paracetamol"></textarea>
+
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" name="notes" rows="3"
+                            placeholder="Any precautions or observations (optional)"></textarea>
+
+                        <button type="submit" class="btn-primary" id="savePrescription">Add Prescription</button>
+                        <button type="button" onclick="window.location.href='/doctor/dashboard'" class="btn-secondary">Cancel</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div th:replace="fragments/footer :: footer" id="footer"></div>
+        </div>
+    </div>
+</body>
+</html>

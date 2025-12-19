@@ -1,0 +1,54 @@
+<!-- src/main/resources/templates/patientRecord.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" th:href="@{/assets/images/logo/logo.png}" />
+    <title>Doctor Dashboard - Patient Record</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+    <!-- JS Files -->
+    <script th:src="@{/js/render.js}" defer></script>
+    <script th:src="@{/js/util.js}" defer></script>
+    <script th:src="@{/js/components/header.js}" defer></script>
+    <script th:src="@{/js/components/footer.js}" defer></script>
+    <script type="module" th:src="@{/js/components/patientRecordRow.js}" defer></script>
+    <script type="module" th:src="@{/js/patientRecordServices.js}" defer></script>
+</head>
+
+<body onload="renderContent()">
+    <div class="container">
+        <div class="wrapper">
+            <!-- Header -->
+            <div th:replace="fragments/header :: header" id="header"></div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <h2>Patient <span>Record</span></h2>
+                <table id="patientTable">
+                    <thead class="table-header">
+                        <tr>
+                            <th>Date</th>
+                            <th>Appointment ID</th>
+                            <th>Patient ID</th>
+                            <th>Prescription</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patientTableBody">
+                        <!-- Dynamic rows inserted via JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div th:replace="fragments/footer :: footer" id="footer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

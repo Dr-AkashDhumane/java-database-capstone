@@ -1,0 +1,65 @@
+<!-- src/main/resources/templates/patientAppointment.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" th:href="@{/assets/images/logo/logo.png}" />
+    <title>Patient Appointments</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+    <!-- JS Files -->
+    <script th:src="@{/js/render.js}" defer></script>
+    <script th:src="@{/js/util.js}" defer></script>
+    <script th:src="@{/js/components/header.js}" defer></script>
+    <script th:src="@{/js/components/footer.js}" defer></script>
+    <script type="module" th:src="@{/js/patientAppointment.js}" defer></script>
+</head>
+
+<body onload="renderContent()">
+    <div class="container">
+        <div class="wrapper">
+            <!-- Header -->
+            <div th:replace="fragments/header :: header" id="header"></div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <h2>Patient <span>Appointment</span></h2>
+
+                <input type="text" id="searchBar" class="searchBar" placeholder="Search Bar for custom output" />
+
+                <div class="filter-wrapper">
+                    <select class="filter-select" id="appointmentFilter">
+                        <option value="allAppointments">All Appointments</option>
+                        <option value="future">Upcoming Appointments</option>
+                        <option value="past">Past Appointments</option>
+                    </select>
+                </div>
+
+                <table id="patientTable">
+                    <thead class="table-header">
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Doctor Name</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patientTableBody">
+                        <!-- rows will be inserted here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div th:replace="fragments/footer :: footer" id="footer"></div>
+        </div>
+    </div>
+</body>
+
+</html>
