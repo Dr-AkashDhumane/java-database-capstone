@@ -26,19 +26,19 @@ app/
 ├── Dockerfile
 ├── pom.xml
 ├── src/
-│ ├── main/
-│ │ ├── java/com/project/back_end/
-│ │ │ ├── config/
-│ │ │ ├── controllers/
-│ │ │ ├── models/
-│ │ │ ├── repo/
-│ │ │ ├── services/
-│ │ │ └── BackEndApplication.java
-│ │ └── resources/
-│ │ ├── application.properties
-│ │ ├── static/
-│ │ └── templates/
-│ └── test/
+│   ├── main/
+│   │   ├── java/com/project/back_end/
+│   │   │   ├── config/
+│   │   │   ├── controllers/
+│   │   │   ├── models/
+│   │   │   ├── repo/
+│   │   │   ├── services/
+│   │   │   └── BackEndApplication.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       └── templates/
+│   └── test/
 └── ...
 
 
