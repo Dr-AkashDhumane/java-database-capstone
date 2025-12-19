@@ -27,20 +27,22 @@ app/
 ├── pom.xml
 ├── src/
 │   ├── main/
-│   │   ├── java/com/project/back_end/
-│   │   │   ├── config/
-│   │   │   ├── controllers/
-│   │   │   ├── models/
-│   │   │   ├── repo/
-│   │   │   ├── services/
-│   │   │   └── BackEndApplication.java
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── project/
+│   │   │           └── back_end/
+│   │   │               ├── config/
+│   │   │               ├── controllers/
+│   │   │               ├── models/
+│   │   │               ├── repo/
+│   │   │               ├── services/
+│   │   │               └── BackEndApplication.java
 │   │   └── resources/
 │   │       ├── application.properties
 │   │       ├── static/
 │   │       └── templates/
 │   └── test/
-└── ...
-
+└── README.md
 
 ---
 
