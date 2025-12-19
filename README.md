@@ -1,6 +1,6 @@
 # Smart Clinic Management System
 
-A backend project for managing clinics, built with **Spring Boot**, **Java 17**, **Maven**, **MySQL**, **MongoDB**, and **Docker**.  
+A backend project for managing clinics, built with **Spring Boot**, **Java 21**, **Maven**, **MySQL**, **MongoDB**, and **Docker**.  
 It supports secure management of doctors, patients, appointments, and prescriptions, with both **REST APIs** and **Thymeleaf dashboards**.
 
 ---
