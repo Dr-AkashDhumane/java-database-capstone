@@ -22,6 +22,7 @@ It supports secure management of **doctors, patients, appointments, and prescrip
 
 ## 📁 Project Structure
 
+```text
 app/
 ├── Dockerfile
 ├── pom.xml
@@ -43,6 +44,7 @@ app/
 │   │       └── templates/
 │   └── test/
 └── README.md
+
 
 ---
 
