@@ -1,6 +1,6 @@
-#**User Stories**
+# **User Stories**
 
-##**1. Admin Login**
+## **1. Admin Login**
 **Title:**
 As an admin, I want to log into the portal using my username and password, so that I can manage the platform securely.
 
@@ -17,7 +17,7 @@ Admin is redirected to the admin dashboard
 
 Invalid credentials should display an error message
 
-##**2. Admin Logout**
+## **2. Admin Logout**
 **Title:**
 As an admin, I want to log out of the portal, so that system access remains protected.
 
@@ -34,7 +34,7 @@ Admin is redirected to the login page
 
 Logout should invalidate the session token
 
-##**3. Add Doctor Profile**
+## **3. Add Doctor Profile**
 **Title:**
 As an admin, I want to add doctors to the portal, so that patients can book appointments with them.
 
@@ -51,7 +51,7 @@ Newly added doctor appears in the doctor list
 
 Doctor email should be unique
 
-##**4. Delete Doctor Profile**
+## **4. Delete Doctor Profile**
 **Title:**
 As an admin, I want to delete a doctor’s profile from the portal, so that inactive doctors are removed.
 
@@ -68,7 +68,7 @@ Doctor profile is no longer visible after deletion
 
 Deletion should not remove historical appointment data
 
-##**5. View Monthly Appointment Statistics**
+## **5. View Monthly Appointment Statistics**
 **Title:**
 As an admin, I want to run a stored procedure in the MySQL CLI to retrieve the number of appointments per month, so that I can track usage statistics.
 
@@ -85,7 +85,7 @@ Results can be used for reporting purposes
 
 Stored procedure should handle months with zero appointments
 
-##**6. View Doctors Without Login**
+## **6. View Doctors Without Login**
 **Title:**
 As a patient, I want to view a list of doctors without logging in, so that I can explore options before registering.
 
@@ -102,7 +102,7 @@ Patient is prompted to sign up when attempting to book
 
 Booking actions should require login
 
-##**7. Patient Sign Up**
+## **7. Patient Sign Up**
 **Title:**
 As a patient, I want to sign up using my email and password, so that I can book appointments.
 
@@ -119,7 +119,7 @@ Successful registration confirmation is displayed
 
 Password must meet security requirements
 
-##**8. Patient Login**
+## **8. Patient Login**
 **Title:**
 As a patient, I want to log into the portal, so that I can manage my bookings.
 
@@ -136,7 +136,7 @@ Invalid login attempts show an error message
 
 Account lockout after multiple failed attempts (optional)
 
-##**9. Patient Logout**
+## **9. Patient Logout**
 **Title:**
 As a patient, I want to log out of the portal, so that my account remains secure.
 
@@ -153,7 +153,7 @@ Patient is redirected to the login page
 
 Logout should invalidate the session token
 
-##**10. Book Doctor Appointment**
+## **10. Book Doctor Appointment**
 **Title:**
 As a patient, I want to log in and book an hour-long appointment with a doctor, so that I can consult with them.
 
@@ -170,7 +170,7 @@ Booking confirmation is displayed
 
 Double-booking should be prevented
 
-##**11. View Upcoming Appointments**
+## **11. View Upcoming Appointments**
 **Title:**
 As a patient, I want to view my upcoming appointments, so that I can prepare accordingly.
 
@@ -187,7 +187,7 @@ Past appointments are excluded from the list
 
 Appointments should be sorted by date
 
-##**12. Doctor Login**
+## **12. Doctor Login**
 **Title:**
 As a doctor, I want to log into the portal, so that I can manage my appointments.
 
@@ -204,7 +204,7 @@ Invalid login attempts display an error message
 
 Access should be limited to doctor role only
 
-##**13. Doctor Logout**
+## **13. Doctor Logout**
 **Title:**
 As a doctor, I want to log out of the portal, so that my data remains protected.
 
@@ -221,7 +221,7 @@ Doctor is redirected to the login page
 
 Logout should invalidate the session token
 
-##**14. View Appointment Calendar**
+## **14. View Appointment Calendar**
 **Title:**
 As a doctor, I want to view my appointment calendar, so that I can stay organized.
 
@@ -238,7 +238,7 @@ Calendar updates in real time when appointments change
 
 Calendar view can be daily or weekly
 
-##**15. Mark Doctor Unavailability**
+## **15. Mark Doctor Unavailability**
 **Title:**
 As a doctor, I want to mark my unavailability, so that patients can only see available time slots.
 
@@ -255,7 +255,7 @@ Changes take effect immediately
 
 Unavailability should override existing availability
 
-##**16. Update Doctor Profile**
+## **16. Update Doctor Profile**
 **Title:**
 As a doctor, I want to update my profile with specialization and contact information, so that patients have up-to-date information.
 
@@ -272,7 +272,7 @@ Changes are visible to patients
 
 Some fields may require admin approval
 
-##**17. View Patient Details for Appointments**
+## **17. View Patient Details for Appointments**
 **Title:**
 As a doctor, I want to view patient details for upcoming appointments, so that I can be prepared.
 
