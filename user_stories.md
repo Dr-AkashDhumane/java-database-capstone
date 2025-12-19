@@ -1,288 +1,290 @@
-1. Admin Login
-Title:
+#**User Stories**
+
+##**1. Admin Login**
+**Title:**
 As an admin, I want to log into the portal using my username and password, so that I can manage the platform securely.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Admin can enter a valid username and password
 System authenticates credentials successfully
 Admin is redirected to the admin dashboard
-Priority: High
+**Priority:** High
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Invalid credentials should display an error message
 
-2. Admin Logout
-Title:
+##**2. Admin Logout**
+**Title:**
 As an admin, I want to log out of the portal, so that system access remains protected.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Admin can log out from any page
 Session is terminated after logout
 Admin is redirected to the login page
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 2
+**Story Points:** 2
 
-Notes:
+**Notes:**
 
 Logout should invalidate the session token
 
-3. Add Doctor Profile
-Title:
+##**3. Add Doctor Profile**
+**Title:**
 As an admin, I want to add doctors to the portal, so that patients can book appointments with them.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Admin can enter doctor details (name, specialization, contact)
 Doctor profile is saved successfully
 Newly added doctor appears in the doctor list
-Priority: High
+**Priority:** High
 
-Story Points: 5
+**Story Points:** 5
 
-Notes:
+**Notes:**
 
 Doctor email should be unique
 
-4. Delete Doctor Profile
-Title:
+##**4. Delete Doctor Profile**
+**Title:**
 As an admin, I want to delete a doctor’s profile from the portal, so that inactive doctors are removed.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Admin can select a doctor profile
 System confirms deletion before removing
 Doctor profile is no longer visible after deletion
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Deletion should not remove historical appointment data
 
-5. View Monthly Appointment Statistics
-Title:
+##**5. View Monthly Appointment Statistics**
+**Title:**
 As an admin, I want to run a stored procedure in the MySQL CLI to retrieve the number of appointments per month, so that I can track usage statistics.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Stored procedure executes successfully in MySQL CLI
 Monthly appointment counts are returned accurately
 Results can be used for reporting purposes
-Priority: Low
+**Priority:** Low
 
-Story Points: 5
+**Story Points:** 5
 
-Notes:
+**Notes:**
 
 Stored procedure should handle months with zero appointments
 
-6. View Doctors Without Login
-Title:
+##**6. View Doctors Without Login**
+**Title:**
 As a patient, I want to view a list of doctors without logging in, so that I can explore options before registering.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor list is accessible without authentication
 Doctor details include name and specialization
 Patient is prompted to sign up when attempting to book
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Booking actions should require login
 
-7. Patient Sign Up
-Title:
+##**7. Patient Sign Up**
+**Title:**
 As a patient, I want to sign up using my email and password, so that I can book appointments.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Patient can register using a valid email and password
 Duplicate email registrations are prevented
 Successful registration confirmation is displayed
-Priority: High
+**Priority:** High
 
-Story Points: 5
+**Story Points:** 5
 
-Notes:
+**Notes:**
 
 Password must meet security requirements
 
-8. Patient Login
-Title:
+##**8. Patient Login**
+**Title:**
 As a patient, I want to log into the portal, so that I can manage my bookings.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Patient can log in using valid credentials
 Patient is redirected to the dashboard
 Invalid login attempts show an error message
-Priority: High
+**Priority:** High
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Account lockout after multiple failed attempts (optional)
 
-9. Patient Logout
-Title:
+##**9. Patient Logout**
+**Title:**
 As a patient, I want to log out of the portal, so that my account remains secure.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Patient can log out from any page
 Session is terminated successfully
 Patient is redirected to the login page
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 2
+**Story Points:** 2
 
-Notes:
+**Notes:**
 
 Logout should invalidate the session token
 
-10. Book Doctor Appointment
-Title:
+##**10. Book Doctor Appointment**
+**Title:**
 As a patient, I want to log in and book an hour-long appointment with a doctor, so that I can consult with them.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Patient can select a doctor and available time slot
 Appointment duration is fixed at one hour
 Booking confirmation is displayed
-Priority: High
+**Priority:** High
 
-Story Points: 5
+**Story Points:** 5
 
-Notes:
+**Notes:**
 
 Double-booking should be prevented
 
-11. View Upcoming Appointments
-Title:
+##**11. View Upcoming Appointments**
+**Title:**
 As a patient, I want to view my upcoming appointments, so that I can prepare accordingly.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Patient can see a list of upcoming appointments
 Appointment date, time, and doctor name are displayed
 Past appointments are excluded from the list
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Appointments should be sorted by date
 
-12. Doctor Login
-Title:
+##**12. Doctor Login**
+**Title:**
 As a doctor, I want to log into the portal, so that I can manage my appointments.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor can log in using valid credentials
 Doctor is redirected to the dashboard
 Invalid login attempts display an error message
-Priority: High
+**Priority:** High
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Access should be limited to doctor role only
 
-13. Doctor Logout
-Title:
+##**13. Doctor Logout**
+**Title:**
 As a doctor, I want to log out of the portal, so that my data remains protected.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor can log out from any page
 Session is terminated successfully
 Doctor is redirected to the login page
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 2
+**Story Points:** 2
 
-Notes:
+**Notes:**
 
 Logout should invalidate the session token
 
-14. View Appointment Calendar
-Title:
+##**14. View Appointment Calendar**
+**Title:**
 As a doctor, I want to view my appointment calendar, so that I can stay organized.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor can view a calendar of scheduled appointments
 Appointment times and patient names are visible
 Calendar updates in real time when appointments change
-Priority: High
+**Priority:** High
 
-Story Points: 5
+**Story Points:** 5
 
-Notes:
+**Notes:**
 
 Calendar view can be daily or weekly
 
-15. Mark Doctor Unavailability
-Title:
+##**15. Mark Doctor Unavailability**
+**Title:**
 As a doctor, I want to mark my unavailability, so that patients can only see available time slots.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor can block unavailable dates or times
 Blocked slots are not shown to patients
 Changes take effect immediately
-Priority: High
+**Priority:** High
 
-Story Points: 5
+**Story Points:** 5
 
-Notes:
+**Notes:**
 
 Unavailability should override existing availability
 
-16. Update Doctor Profile
-Title:
+##**16. Update Doctor Profile**
+**Title:**
 As a doctor, I want to update my profile with specialization and contact information, so that patients have up-to-date information.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor can edit specialization and contact details
 Updated information is saved successfully
 Changes are visible to patients
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Some fields may require admin approval
 
-17. View Patient Details for Appointments
-Title:
+##**17. View Patient Details for Appointments**
+**Title:**
 As a doctor, I want to view patient details for upcoming appointments, so that I can be prepared.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Doctor can view patient name and basic details
 Information is accessible only for assigned appointments
 Data is displayed securely
-Priority: Medium
+**Priority:** Medium
 
-Story Points: 3
+**Story Points:** 3
 
-Notes:
+**Notes:**
 
 Medical history access may be read-only
